@@ -1,12 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import StopWatch from './components/StopWatch';
 
-const App = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+const App = () => <StopWatch />;
 
 ReactDOM.render(<App />, document.getElementById('app'));
