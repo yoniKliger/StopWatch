@@ -1,17 +1,16 @@
-import React from 'react';
-import './index.css';
+import React, {useState} from 'react';
+import TimeDisplayer from '../TimeDisplayer';
+import WatchControls from '../WatchControls';
+import TimeContext from '../../contexts/TimeContext';
 
 const StopWatch = () => {
+    const [time, SetTime] = useState(0);
     return (
         <div className = "stop-watch">
-            <div>
-                <label>00:00:00</label>
-            </div>
-            <div>
-                <button>Start</button>
-                <button>Stop</button>
-                <button>Reset</button>
-            </div>
+            <TimeContext.Provider value = {time}>
+                <TimeDisplayer />
+                <WatchControls />
+            </TimeContext.Provider>
         </div>
     );
 };
